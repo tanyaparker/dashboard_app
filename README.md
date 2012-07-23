@@ -1,11 +1,6 @@
-== Welcome to Rails
-Here's a link: link:tumblr.com.
+# Dashboard Application: Displays SAYS Statistics
 
-        A box
+This is my first application for [SAYS Sdn Bhd](http://says.com./) by Tanya Parker
 
-
-A box <tt>within</tt> the text.
-
-# Ruby on Rails Tutorial: first application
-
-This is the first application for [*Ruby on Rails Tutorial: Learn Rails by Example*](http://railstutorial.org/) by [Michael Hartl](http://michaelhartl.com/)
+<!-- indent to put text in a box 
+  or <tt></tt> tags for a box within a sentence -->
