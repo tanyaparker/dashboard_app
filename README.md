@@ -1,4 +1,4 @@
-# Dashboard Application: Displays SAYS Statistics
+# RADAR: Dashboard for SAYS Statistics
 
 This is my first application for [SAYS Sdn Bhd](http://says.com./) by Tanya Parker
 

@@ -10,7 +10,7 @@ describe "StaticPages" do
 
     it "should have the base title" do
       visit '/static_pages/home'
-      page.should have_selector('title', :text => "SAYS Dashboard")
+      page.should have_selector('title', :text => "RADAR")
     end
 
     it "should not have a custom page title" do
@@ -27,7 +27,7 @@ describe "StaticPages" do
 
     it "should have the title 'Help'" do
       visit '/static_pages/help'
-      page.should have_selector('title', :text => "SAYS Dashboard")
+      page.should have_selector('title', :text => "RADAR")
     end
 
     it "should not have a custom page title" do
@@ -44,7 +44,7 @@ describe "StaticPages" do
 
     it "should have the title 'About Us'" do
       visit '/static_pages/about'
-      page.should have_selector('title', :text => "SAYS Dashboard")
+      page.should have_selector('title', :text => "RADAR")
     end
 
     it "should not have a custom page title" do
@@ -61,7 +61,7 @@ describe "StaticPages" do
 
     it "should have the title 'Contact Us'" do
       visit '/static_pages/contact'
-      page.should have_selector('title', :text => "SAYS Dashboard")
+      page.should have_selector('title', :text => "RADAR")
     end
 
     it "should not have a custom page title" do
