@@ -1,4 +1,5 @@
 DashboardApp::Application.routes.draw do
+
   get "static_pages/home"
 
   get "static_pages/help"
@@ -10,6 +11,8 @@ DashboardApp::Application.routes.draw do
   resources :microposts
 
   resources :users
+
+  get "/product" => "product_stats#get_features"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

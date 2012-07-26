@@ -2,6 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 
+gem 'multi_xml', '~> 0.5.1'
+gem 'multi_json', '~> 1.3.6'
+gem 'httparty', '~> 0.8.3'
+gem 'nokogiri'
+
 group :development do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.10.0'

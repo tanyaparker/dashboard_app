@@ -10,53 +10,7 @@
   state:unscheduled, unstarted, started, finished, delivered, accepted
   <br>
   type:Feature, Bug, Chore, Release
-  <br>
-  includedone: true
     </p>
-  <p>
-  get stories by filter:
-
-  curl -H "X-TrackerToken: 92ed66d596d5e1d5c799c7513a764c77" -X GET "http://www.pivotaltracker.com/services/v3/projects/582291/stories?filter=label%3A%22radar%22%20state%3Astarted%2Cfinished%2Cdelivered%20type%3AFeature%20includedone%3Atrue"
-  <br><br>
-  returns:
-  <?xml version="1.0" encoding="UTF-8"?>
-<stories type="array" filter="label:'remix' state:finished type:Feature includedone:true" count="1" total="1">
-  <story>
-    <id type="integer">32071859</id>
-    <project_id type="integer">582291</project_id>
-    <story_type>feature</story_type>
-    <url>http://www.pivotaltracker.com/story/show/32071859</url>
-    <estimate type="integer">0</estimate>
-    <current_state>finished</current_state>
-    <description>- it triggered one remix (created in SG) to duplicate a few times across all countries</description>
-    <name>Remove/Hide 'Showcase' from Admin settings</name>
-    <requested_by>Judith Yeoh</requested_by>
-    <owned_by>Tanya Parker</owned_by>
-    <created_at type="datetime">2012/06/30 18:21:55 UTC</created_at>
-    <updated_at type="datetime">2012/07/12 07:42:26 UTC</updated_at>
-    <labels>admin,remix,showcase</labels>
-    <notes type="array">
-      <note>
-        <id type="integer">25511851</id>
-        <text>Hidden, not removed</text>
-        <author>Tanya Parker</author>
-        <noted_at type="datetime">2012/07/12 07:42:26 UTC</noted_at>
-      </note>
-    </notes>
-    <attachments type="array">
-      <attachment>
-        <id type="integer">9717737</id>
-        <filename>Screen_Shot_2012-07-01_at_2.17.20_AM.png</filename>
-        <description></description>
-        <uploaded_by>Judith Yeoh</uploaded_by>
-        <uploaded_at type="datetime">2012/06/30 18:21:49 UTC</uploaded_at>
-        <url>https://www.pivotaltracker.com/resource/download/9717737</url>
-      </attachment>
-    </attachments>
-  </story>
-</stories>
-
-  </p>
 </p>
 
 <!-- see http://www.w3schools.com/tags/ref_urlencode.asp for URL encoding -->
