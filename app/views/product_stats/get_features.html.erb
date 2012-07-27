@@ -5,7 +5,7 @@
     <% for i in (0...10) %>
       <% if @project.stories.all["#{i}".to_i].current_state == "accepted" %>
         <li class="feature_completed">
-          <%= @project.stories.all["#{i}".to_i].current_state%>
+          <%= @project.stories.all["#{i}".to_i].name%>
         </li>
       <% else %>  
         <li class="feature_progress">
