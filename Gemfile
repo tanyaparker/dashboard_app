@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 
 gem 'multi_xml', '~> 0.5.1'
 gem 'multi_json', '~> 1.3.6'
+gem 'pivotal-tracker', '~> 0.5.4'
 gem 'httparty', '~> 0.8.3'
 gem 'nokogiri'
 
