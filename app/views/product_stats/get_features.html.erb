@@ -2,10 +2,16 @@
 
 <div id="container">
   <ul>
-    <% for i in (0...@count) %>
-      <li class="feature_progress">
-      <%= @project.stories.all["#{i}".to_i].name %>
-      </li>
+    <% for i in (0...10) %>
+      <% if @project.stories.all["#{i}".to_i].current_state == "accepted" %>
+        <li class="feature_completed">
+          <%= @project.stories.all["#{i}".to_i].current_state%>
+        </li>
+      <% else %>  
+        <li class="feature_progress">
+          <%= @project.stories.all["#{i}".to_i].name %>
+        </li>
+      <% end %>  
     <% end %>
   </ul>
 </div>
