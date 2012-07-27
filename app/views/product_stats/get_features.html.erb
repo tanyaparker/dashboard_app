@@ -1,0 +1,11 @@
+<h1>Product Team Stats</h1>
+
+<div id="container">
+  <ul>
+    <% for i in (0...@count) %>
+      <li class="feature_progress">
+      <%= @project.stories.all["#{i}".to_i].name %>
+      </li>
+    <% end %>
+  </ul>
+</div>
