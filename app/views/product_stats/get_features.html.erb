@@ -1,18 +1,100 @@
 <h1>Product Team Stats</h1>
-
+ 
 <div id="container">
-  <ul>
-    <% for i in (0...10) %>
-      <% if @project.stories.all["#{i}".to_i].story_type == "bug" %>
-        <li class="feature_completed">
-          <%= @project.stories.all["#{i}".to_i].name %>
-        </li>
+  <ul class="feature">
+    <% for i in (0...50) %>
+      <% if @new_project["#{i}".to_i].story_type == "bug" %>
+        <% if @new_project["#{i}".to_i].current_state == "accepted" %> 
+              <li class="feat_accepted">
+              <%= @new_project["#{i}".to_i].name %><span class="bugs"></span>
+              </li>
+            <% elsif @new_project["#{i}".to_i].current_state == "delivered" %>
+              <li class="feat_delivered">
+              <%= @new_project["#{i}".to_i].name %><span class="bugs"></span>
+              </li> 
+            <% elsif @new_project["#{i}".to_i].current_state == "finished"%>
+              <li class="feat_finished">
+              <%= @new_project["#{i}".to_i].name %><span class="bugs"></span>
+              </li>
+            <% elsif @new_project["#{i}".to_i].current_state == "rejected"%>
+              <li class="feat_rejected">
+              <%= @new_project["#{i}".to_i].name %><span class="bugs"></span>
+              </li>     
+            <% else %>
+              <li class="feat_started">
+              <%= @new_project["#{i}".to_i].name %><span class="bugs"></span>
+              </li> 
+        <% end %>    
+      <% elsif @new_project["#{i}".to_i].story_type == "chore" %>  
+        <% if @new_project["#{i}".to_i].current_state == "accepted" %> 
+              <li class="feat_accepted">
+              <%= @new_project["#{i}".to_i].name %><span class="chores"></span>
+              </li>
+            <% elsif @new_project["#{i}".to_i].current_state == "delivered" %>
+              <li class="feat_delivered">
+              <%= @new_project["#{i}".to_i].name %><span class="chores"></span>
+              </li> 
+            <% elsif @new_project["#{i}".to_i].current_state == "finished"%>
+              <li class="feat_finished">
+              <%= @new_project["#{i}".to_i].name %><span class="chores"></span>
+              </li>
+            <% elsif @new_project["#{i}".to_i].current_state == "rejected"%>
+              <li class="feat_rejected">
+              <%= @new_project["#{i}".to_i].name %><span class="chores"></span>
+              </li>     
+            <% else %>
+              <li class="feat_started">
+              <%= @new_project["#{i}".to_i].name %><span class="chores"></span>
+              </li> 
+        <% end %>
+      <% elsif @new_project["#{i}".to_i].story_type == "feature" %>  
+        <% if @new_project["#{i}".to_i].current_state == "accepted" %> 
+              <li class="feat_accepted">
+              <%= @new_project["#{i}".to_i].name %><span class="features"></span>
+              </li>
+            <% elsif @new_project["#{i}".to_i].current_state == "delivered" %>
+              <li class="feat_delivered">
+              <%= @new_project["#{i}".to_i].name %><span class="features"></span>
+              </li> 
+            <% elsif @new_project["#{i}".to_i].current_state == "finished"%>
+              <li class="feat_finished">
+              <%= @new_project["#{i}".to_i].name %><span class="features"></span>
+              </li>
+            <% elsif @new_project["#{i}".to_i].current_state == "rejected"%>
+              <li class="feat_rejected">
+              <%= @new_project["#{i}".to_i].name %><span class="features"></span>
+              </li>     
+            <% else %>
+              <li class="feat_started">
+              <%= @new_project["#{i}".to_i].name %><span class="features"></span>
+              </li> 
+        <% end %>
       <% else %>  
-        <li class="feature_progress">
-          <%= @project.stories.all["#{i}".to_i].name %>
-        </li>
+        <% if @new_project["#{i}".to_i].current_state == "accepted" %> 
+              <li class="feat_accepted">
+              <%= @new_project["#{i}".to_i].name %><span class="releases"></span>
+              </li>
+            <% elsif @new_project["#{i}".to_i].current_state == "delivered" %>
+              <li class="feat_delivered">
+              <%= @new_project["#{i}".to_i].name %><span class="releases"></span>
+              </li> 
+            <% elsif @new_project["#{i}".to_i].current_state == "finished"%>
+              <li class="feat_finished">
+              <%= @new_project["#{i}".to_i].name %><span class="releases"></span>
+              </li>
+            <% elsif @new_project["#{i}".to_i].current_state == "rejected"%>
+              <li class="feat_rejected">
+              <%= @new_project["#{i}".to_i].name %><span class="releases"></span>
+              </li>     
+            <% else %>
+              <li class="feat_started">
+              <%= @new_project["#{i}".to_i].name %><span class="releases"></span>
+              </li> 
+        <% end %>
       <% end %>  
     <% end %>
   </ul>
 </div>
+
+
 

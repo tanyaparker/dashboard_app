@@ -1,0 +1,91 @@
+body {
+	background: #101010;
+	font-family: "Bebas Neue";
+	color: #FFFFFF;
+}
+
+.clear {
+	clear: both;
+}
+
+.feature {
+	font-size: 70px;
+	margin: 0 50 0 50;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+	.feature ul {
+	}
+	
+	.feature li {
+	background: #272727;
+	list-style: none;
+	line-height: 100%;
+	margin: 10px 0 10px 0;
+	padding: 10px 20px 10px 20px;
+	text-overflow: ellipsis;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-transition: all 0.1s ease-in-out;
+	}
+	
+		.feature span.bugs {
+			background: url("<%= asset_path('bug.png') %>") no-repeat;
+			display: block;
+			float: right;
+			margin: 10 0 0 0;
+			height: 48px;
+			width: 48px;
+		}
+		
+		.feature span.chores {
+			background: url("<%= asset_path('chore.png') %>") no-repeat;
+			display: block;
+			float: right;
+			margin: 10 0 0 0;
+			height: 48px;
+			width: 48px;
+		}
+		
+		.feature span.features {
+			background: url("<%= asset_path('feature.png') %>") no-repeat;
+			display: block;
+			float: right;
+			margin: 10 0 0 0;
+			height: 48px;
+			width: 48px;
+		}
+		
+		.feature span.releases {
+			background: url("<%= asset_path('release.png') %>") no-repeat;
+			display: block;
+			float: right;
+			margin: 10 0 0 0;
+			height: 48px;
+			width: 48px;
+		}
+
+		.feature li.feat_accepted {
+ 			background-color: #89d835;
+		}
+		
+		.feature li.feat_finished {
+			background-color: #67c2cf;
+		}
+	
+		.feature li.feat_delivered {
+			background-color: #ffa121;
+		}
+
+		.feature li.feat_rejected {
+			background-color: #ec5742;
+		}
+		
+		.feature li.feat_unstarted {
+			background-color: #272727;
+		}
+	
+		.feature li:hover {
+			-webkit-transform: translate(20px, 0px);
+		}
