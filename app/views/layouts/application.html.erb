@@ -5,6 +5,18 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+
+    <script type="text/javascript">
+    window.onload = setupRefresh;
+
+    function setupRefresh() {
+      setTimeout("refreshPage();", 60000); // milliseconds
+    }
+    function refreshPage() {
+       window.location = location.href;
+    }
+    </script>
+
   </head>
   <body>
     <%= yield %>

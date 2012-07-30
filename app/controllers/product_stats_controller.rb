@@ -3,10 +3,11 @@ class ProductStatsController < ApplicationController
   def get_features		
   	PivotalTracker::Client.token = '002c98a5157fc9cc5c180766d7c02dbd'
 	@project = PivotalTracker::Project.find(582291)
-	@project.stories.all(:state => ['started', 'finished', 'delivered', 'acccepted', 'rejected'], :type => ['Feature', 'Bug', 'Chore'])
-	@project.stories.all.sort! { |a,b| b.created_at <=> a.created_at }
-	@new_project = @project.stories.all.slice(0,50) 
-	@new_project.sort! { |a,b| a.current_state <=> b.current_state}
+	@new_project =  @project.stories.all(:current_state => ['started', 'finished', 'delivered', 'accepted', 'rejected'])
+	@new_project.sort! { |a,b| b.created_at <=> a.created_at }
+	@count = @new_project.size
+	@final_project = @new_project.slice(0,@count)
+	@final_project.sort! { |a,b| a.current_state <=> b.current_state}
   end 
 end
 

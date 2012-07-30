@@ -29,6 +29,9 @@ body {
 	-moz-border-radius: 5px;
 	-webkit-transition: all 0.1s ease-in-out;
 	}
+
+/*		.feature span.feat_title {
+		}*/
 	
 		.feature span.bugs {
 			background: url("<%= asset_path('bug.png') %>") no-repeat;
@@ -49,10 +52,11 @@ body {
 		}
 		
 		.feature span.features {
-			background: url("<%= asset_path('feature.png') %>") no-repeat;
+			background: url("<%= asset_path('feature.png') %>") center no-repeat;
 			display: block;
 			float: right;
-			margin: 10 0 0 0;
+			margin: 0 0 0 0;
+			padding: 20 20 20 20;
 			height: 48px;
 			width: 48px;
 		}
