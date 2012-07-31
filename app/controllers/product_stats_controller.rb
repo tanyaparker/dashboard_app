@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'json'
+require 'net/http'
+
 class ProductStatsController < ApplicationController
 
   def get_features		
@@ -18,7 +22,14 @@ class ProductStatsController < ApplicationController
   end 
 
   def get_campaigns
-  	
-  	
+
+    url = "http://says.com/my/campaigns.json"
+    resp = Net::HTTP.get_response(URI.parse(url))
+    data = resp.body
+    @result = JSON.parse(data)
+    @count = @result.size
+
   end
 end
+
+#<%=  @result["#{i}".to_i]["photo_url"] %>
