@@ -3,7 +3,10 @@
 	<ul class="feature">
 	  <% for i in (0...@count) %>
 	    <li class="feat_started">
-          <%=  @result["#{i}".to_i]["title"] %>
+          <%= @result["#{i}".to_i]["title"] %> :
+          <%= @per %>%
     	</li>
 	  <% end %>
 </div>
+
+<br><br>

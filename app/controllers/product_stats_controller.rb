@@ -6,19 +6,19 @@ class ProductStatsController < ApplicationController
 
   def get_features		
   	PivotalTracker::Client.token = '002c98a5157fc9cc5c180766d7c02dbd'
-	@project = PivotalTracker::Project.find(582291)
-	@new_project =  @project.stories.all(:current_state => ['started', 'finished', 'delivered', 'accepted', 'rejected'])
-	@new_project.sort! { |a,b| b.created_at <=> a.created_at }
-	@count = @new_project.size
+	  @project = PivotalTracker::Project.find(582291)
+	  @new_project =  @project.stories.all(:current_state => ['started', 'finished', 'delivered', 'accepted', 'rejected'])
+	  @new_project.sort! { |a,b| b.created_at <=> a.created_at }
+	  @count = @new_project.size
 
-	if(@count < 10)
-	  @final_project = @new_project.slice(0, @count)
+	  if(@count < 10)
+	    @final_project = @new_project.slice(0, @count)
     else
       @count = 10 	
-	  @final_project = @new_project.slice(0, @count)
-	end
+	    @final_project = @new_project.slice(0, @count)
+	  end
 
-	@final_project.sort! { |a,b| a.current_state <=> b.current_state}
+	 @final_project.sort! { |a,b| a.current_state <=> b.current_state}
   end 
 
   def get_campaigns
@@ -29,7 +29,14 @@ class ProductStatsController < ApplicationController
     @result = JSON.parse(data)
     @count = @result.size
 
+    for i in (0...@count)
+      @num = @result["#{i}".to_i]["uv_count"]
+      @den = @result["#{i}".to_i]["target_uv"]
+      @per = (@num * 100.0) / @den
+      @per = @per.round(1)
+    end
+
   end
 end
 
-#<%=  @result["#{i}".to_i]["photo_url"] %>
+#photo_url for picture
