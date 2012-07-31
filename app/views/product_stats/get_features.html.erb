@@ -4,7 +4,7 @@
     <% for i in (0...@count) %>
       <% if @final_project["#{i}".to_i].story_type == "bug" %>
         <% if @final_project["#{i}".to_i].current_state == "accepted" %> 
-              <li class="feat_accepted">
+              <li class="feat_accepted bugs">
               <%= @final_project["#{i}".to_i].name %><span class="bugs"></span>
               </li>
             <% elsif @final_project["#{i}".to_i].current_state == "delivered" %>

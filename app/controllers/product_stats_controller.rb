@@ -8,7 +8,7 @@ class ProductStatsController < ApplicationController
 	@count = @new_project.size
 
 	if(@count < 10)
-	  @final_project = @new_project.slice(0,@count)
+	  @final_project = @new_project.slice(0, @count)
     else
       @count = 10 	
 	  @final_project = @new_project.slice(0, @count)
@@ -16,4 +16,9 @@ class ProductStatsController < ApplicationController
 
 	@final_project.sort! { |a,b| a.current_state <=> b.current_state}
   end 
+
+  def get_campaigns
+  	
+  	
+  end
 end
