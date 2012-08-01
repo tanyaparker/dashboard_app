@@ -20,81 +20,59 @@ body {
 	text-transform: uppercase;
 }
 
-/*	.feature ul {
-	}*/
-	
 	.feature li {
 	background: #272727;
 	list-style: none;
 	line-height: 100%;
 	margin: 10px 0 10px 0;
-	padding: 10px 20px 10px 20px;
+	padding: 10px 192px 10px 20px;
 	text-overflow: ellipsis;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-transition: all 0.1s ease-in-out;
 	}
 
-/*		.feature span.feat_title {
-		}*/
-	
-		.feature span.bugs {
-			background: url("<%= asset_path('bug.png') %>") no-repeat;
-			display: block;
-			float: right;
-			margin: 10 0 0 0;
-			height: 48px;
-			width: 48px;
-		}
-		
-		.feature span.chores {
-			background: url("<%= asset_path('chore.png') %>") no-repeat;
-			display: block;
-			float: right;
-			margin: 10 0 0 0;
-			height: 48px;
-			width: 48px;
-		}
-		
-		.feature span.features {
-			background: url("<%= asset_path('feature.png') %>") center no-repeat;
-			display: block;
-			float: right;
-			margin: 0 0 0 0;
-			padding: 20 20 20 20;
-			height: 48px;
-			width: 48px;
-		}
-		
-		.feature span.releases {
-			background: url("<%= asset_path('release.png') %>") no-repeat;
-			display: block;
-			float: right;
-			margin: 10 0 0 0;
-			height: 48px;
-			width: 48px;
-		}
+	.feature li.feat_accepted {
+		background-color: #89d835;
+	}
 
-		.feature li.feat_accepted {
- 			background-color: #89d835;
-		}
-		
-		.feature li.feat_finished {
-			background-color: #67c2cf;
-		}
-	
-		.feature li.feat_delivered {
-			background-color: #ffa121;
-		}
+	.feature li.feat_delivered {
+		background-color: #ffa121;
+	}
 
-		.feature li.feat_rejected {
-			background-color: #ec5742;
-		}
-		
-		.feature li.feat_started {
-			background-color: #272727;
-		}
-	
-		.feature li:hover {
-			-webkit-transform: translate(20px, 0px);
-		}
+	.feature li.feat_finished {
+		background-color: #67c2cf;
+	}
+
+	.feature li.feat_rejected {
+		background-color: #ec5742;
+	}
+
+	.feature li.feat_started {
+		background-color: #272727;
+	}
+
+	li.bug {
+		background: url("<%= asset_path('bug@4x.png') %>") no-repeat top right;
+		background-size: 192px;
+	}
+
+	li.chore {
+		background: url("<%= asset_path('chore@4x.png') %>") no-repeat top right;
+		background-size: 192px;
+	}
+
+	li.feature {
+		background: url("<%= asset_path('feature@4x.png') %>") no-repeat top right;
+		background-size: 192px;
+	}
+
+	li.release {
+		background: url("<%= asset_path('release@4x.png') %>") no-repeat top right;
+		background-size: 192px;
+	}
+
+.feature li:hover {
+	-webkit-transform: translate(20px, 0);
+	-moz-transform: translate(20px, 0);
+}
