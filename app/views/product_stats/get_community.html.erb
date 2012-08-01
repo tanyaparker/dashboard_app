@@ -1,14 +1,14 @@
 <div class="container_12">
   <div id="page_title" class="container_12">Community Team Stats</div>
 	<ul class="feature">
-	  <li> Singapore Sign-ups:  <%= @signsg[0]["datapoints"].last.first.round(0) %> </li>
-	  <li> Australia Sign-ups:  <%= @signin[0]["datapoints"].last.first.round(0) %> </li>
-	  <li> India Sign-ups:  <%= @signau[0]["datapoints"].last.first.round(0) %> </li>
-	  <li> Philippines Sign-ups:  <%= @signph[0]["datapoints"].last.first.round(0) %> </li>
+	  <li> Singapore Sign-ups:  <%= @signsg[0]["datapoints"].last.first.to_i %> </li>
+	  <li> Australia Sign-ups:  <%= @signin[0]["datapoints"].last.first.to_i %> </li>
+	  <li> India Sign-ups:  <%= @signau[0]["datapoints"].last.first.to_i %> </li>
+	  <li> Philippines Sign-ups:  <%= @signph[0]["datapoints"].last.first.to_i %> </li>
 
-	  <li> Singapore Subscribers:  <%= @subsg[0]["datapoints"].last.first.round(0) %> </li>
-	  <li> India Subscribers:  <%= @subin[0]["datapoints"].last.first.round(0) %> </li>
-	  <li> Australia Subscribers: <%= @subau[0]["datapoints"].last.first.round(0) %> </li>
-	  <li> Philippines Suscribers:  <%= @subph[0]["datapoints"].last.first.round(0) %> </li>
+	  <li> Singapore Subscribers:  <%= @subsg[0]["datapoints"].last.first.to_i %> </li>
+	  <li> India Subscribers:  <%= @subin[0]["datapoints"].last.first.to_i %> </li>
+	  <li> Australia Subscribers: <%= @subau[0]["datapoints"].last.first.to_i %> </li>
+	  <li> Philippines Suscribers:  <%= @subph[0]["datapoints"].last.first.to_i %> </li>
 	</ul>
 </div>
