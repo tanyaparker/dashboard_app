@@ -14,7 +14,7 @@ class ProductStatsController < ApplicationController
 	  if(@count < 10)
 	    @final_project = @new_project.slice(0, @count)
     else
-      @count = 10 	
+      #@count = 10 	
 	    @final_project = @new_project.slice(0, @count)
 	  end
 
