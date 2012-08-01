@@ -1,6 +1,6 @@
 body {
 	background: #101010;
-	font-family: "Bebas Neue";
+	font-family: Bebas Neue;
 	color: #FFFFFF;
 }
 
@@ -12,6 +12,9 @@ body {
 	font-size: 80px;
 	margin: 15px 50px 0 50px;
 }
+
+
+/* PRODUCT PAGE CSS */
 
 .feature {
 	font-size: 70px;
@@ -75,4 +78,46 @@ body {
 .feature li:hover {
 	-webkit-transform: translate(20px, 0);
 	-moz-transform: translate(20px, 0);
+}
+
+/* CAMPAIGN PAGE CSS */
+
+.main_container {
+	margin: 0 50px 0 50px;
+	line-height: 80%;
+}
+
+ul.progress_container {
+	font-size: 90px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+.progress_bg {
+	background: #272727;
+	margin: 10px 0 10px 0;
+	padding: 10px 20px 0px 20px;
+	position: relative;
+	line-height: 80%;
+	overflow: hidden;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	z-index: 2;
+}
+
+.progress_title {
+	z-index: 1;
+}
+
+.progress_bar {
+	background: #ffa121;
+	display: block;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }

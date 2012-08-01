@@ -32,7 +32,7 @@ class ProductStatsController < ApplicationController
       @num = @result["#{i}".to_i]["uv_count"]
       @den = @result["#{i}".to_i]["target_uv"]
       @per = (@num * 100.0) / @den
-      @per = @per.round(1)
+      @per = @per.round(0)
     end
   end
 

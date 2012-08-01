@@ -1,10 +1,9 @@
-<div class="container_12">
-  <div id="page_title" class="container_12">Campaign Team Stats</div>
-	<ul class="feature">
+<div id="page_title">Campaign Team Stats</div>
+<div class="main_container">
+	<ul class="progress_container">
 	  <% for i in (0...@count) %>
-	    <li class="feat_started">
-          <%= @result["#{i}".to_i]["title"] %> :
-          <%= @per %>%
+	    <li class="progress_bg">
+          <span class="progress_bar" style="width: <%= @per %>%"></span><span class="progress_title"><%= @result["#{i}".to_i]["title"] %></span>
     	</li>
 	  <% end %>
 	</ul>
