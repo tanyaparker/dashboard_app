@@ -4,91 +4,51 @@
     <% for i in (0...@count) %>
       <% if @final_project["#{i}".to_i].story_type == "bug" %>
         <% if @final_project["#{i}".to_i].current_state == "accepted" %> 
-              <li class="feat_accepted bug">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>
+              <li class="feat_accepted bug"><%= @final_project["#{i}".to_i].name %></li>
             <% elsif @final_project["#{i}".to_i].current_state == "delivered" %>
-              <li class="feat_delivered bug">
-              <%= @final_project["#{i}".to_i].name %>
-              </li> 
+              <li class="feat_delivered bug"><%= @final_project["#{i}".to_i].name %></li> 
             <% elsif @final_project["#{i}".to_i].current_state == "finished" %>
-              <li class="feat_finished bug">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>
+              <li class="feat_finished bug"><%= @final_project["#{i}".to_i].name %></li>
             <% elsif @final_project["#{i}".to_i].current_state == "rejected" %>
-              <li class="feat_rejected bug">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>     
+              <li class="feat_rejected bug"><%= @final_project["#{i}".to_i].name %></li>     
             <% else %>
-              <li class="feat_started bug">
-              <%= @final_project["#{i}".to_i].name %>
-              </li> 
+              <li class="feat_started bug"><%= @final_project["#{i}".to_i].name %></li> 
         <% end %>    
       <% elsif @final_project["#{i}".to_i].story_type == "chore" %>  
         <% if @final_project["#{i}".to_i].current_state == "accepted" %> 
-              <li class="feat_accepted chore">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>
+              <li class="feat_accepted chore"><%= @final_project["#{i}".to_i].name %></li>
             <% elsif @final_project["#{i}".to_i].current_state == "delivered" %>
-              <li class="feat_delivered  chore">
-              <%= @final_project["#{i}".to_i].name %>
-              </li> 
+              <li class="feat_delivered  chore"><%= @final_project["#{i}".to_i].name %></li> 
             <% elsif @final_project["#{i}".to_i].current_state == "finished" %>
-              <li class="feat_finished  chore">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>
+              <li class="feat_finished  chore"><%= @final_project["#{i}".to_i].name %></li>
             <% elsif @final_project["#{i}".to_i].current_state == "rejected" %>
-              <li class="feat_rejected  chore">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>     
+              <li class="feat_rejected  chore"><%= @final_project["#{i}".to_i].name %></li>     
             <% else %>
-              <li class="feat_started  chore">
-              <%= @final_project["#{i}".to_i].name %>
-              </li> 
+              <li class="feat_started  chore"><%= @final_project["#{i}".to_i].name %></li> 
         <% end %>
       <% elsif @final_project["#{i}".to_i].story_type == "feature" %>  
         <% if @final_project["#{i}".to_i].current_state == "accepted" %> 
-              <li class="feat_accepted feature">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>
+              <li class="feat_accepted feature"><%= @final_project["#{i}".to_i].name %></li>
             <% elsif @final_project["#{i}".to_i].current_state == "delivered" %>
-              <li class="feat_delivered feature">
-              <%= @final_project["#{i}".to_i].name %>
-              </li> 
+              <li class="feat_delivered feature"><%= @final_project["#{i}".to_i].name %></li> 
             <% elsif @final_project["#{i}".to_i].current_state == "finished" %>
-              <li class="feat_finished feature">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>
+              <li class="feat_finished feature"><%= @final_project["#{i}".to_i].name %></li>
             <% elsif @final_project["#{i}".to_i].current_state == "rejected" %>
-              <li class="feat_rejected feature">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>     
+              <li class="feat_rejected feature"><%= @final_project["#{i}".to_i].name %></li>
             <% else %>
-              <li class="feat_started feature">
-              <%= @final_project["#{i}".to_i].name %>
-              </li> 
+              <li class="feat_started feature"><%= @final_project["#{i}".to_i].name %></li> 
         <% end %>
       <% else %>  
         <% if @final_project["#{i}".to_i].current_state == "accepted" %> 
-              <li class="feat_accepted release">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>
+              <li class="feat_accepted release"><%= @final_project["#{i}".to_i].name %></li>
             <% elsif @final_project["#{i}".to_i].current_state == "delivered" %>
-              <li class="feat_delivered release">
-              <%= @final_project["#{i}".to_i].name %>
-              </li> 
+              <li class="feat_delivered release"><%= @final_project["#{i}".to_i].name %></li> 
             <% elsif @final_project["#{i}".to_i].current_state == "finished" %>
-              <li class="feat_finished release">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>
+              <li class="feat_finished release"><%= @final_project["#{i}".to_i].name %></li>
             <% elsif @final_project["#{i}".to_i].current_state == "rejected" %>
-              <li class="feat_rejected release">
-              <%= @final_project["#{i}".to_i].name %>
-              </li>     
+              <li class="feat_rejected release"><%= @final_project["#{i}".to_i].name %></li>    
             <% else %>
-              <li class="feat_started release">
-              <%= @final_project["#{i}".to_i].name %>
-              </li> 
+              <li class="feat_started release"><%= @final_project["#{i}".to_i].name %></li> 
         <% end %>
       <% end %>  
     <% end %>

@@ -37,8 +37,35 @@ class ProductStatsController < ApplicationController
   end
 
   def get_community
+    sgsign = "http://stats.internal.says.com/render?target=stats.gauges.says-global.production.sg.signup.count&format=json"
+    insign = "http://stats.internal.says.com/render?target=stats.gauges.says-global.production.in.signup.count&format=json"
+    ausign = "http://stats.internal.says.com/render?target=stats.gauges.says-global.production.au.signup.count&format=json"
+    phsign = "http://stats.internal.says.com/render?target=stats.gauges.says-global.production.ph.signup.count&format=json"
 
+    sgsub = "http://stats.internal.says.com/render?target=stats.gauges.says-global.production.sg.subscribers.subscribed.count&format=json"
+    insub = "http://stats.internal.says.com/render?target=stats.gauges.says-global.production.in.subscribers.subscribed.count&format=json"
+    ausub = "http://stats.internal.says.com/render?target=stats.gauges.says-global.production.au.subscribers.subscribed.count&format=json"
+    phsub = "http://stats.internal.says.com/render?target=stats.gauges.says-global.production.ph.subscribers.subscribed.count&format=json"
 
+    sign_sg = Net::HTTP.get_response(URI.parse(sgsign))
+    sign_in = Net::HTTP.get_response(URI.parse(insign))
+    sign_au = Net::HTTP.get_response(URI.parse(ausign))
+    sign_ph = Net::HTTP.get_response(URI.parse(phsign))
+
+    sub_sg = Net::HTTP.get_response(URI.parse(sgsub))
+    sub_in = Net::HTTP.get_response(URI.parse(insub))
+    sub_au = Net::HTTP.get_response(URI.parse(ausub))
+    sub_ph = Net::HTTP.get_response(URI.parse(phsub))
+
+    @signsg = JSON.parse(sign_sg.body)
+    @signin = JSON.parse(sign_in.body)
+    @signau = JSON.parse(sign_au.body)
+    @signph = JSON.parse(sign_ph.body)
+
+    @subsg = JSON.parse(sub_sg.body)
+    @subin = JSON.parse(sub_in.body)
+    @subau = JSON.parse(sub_au.body)
+    @subph = JSON.parse(sub_ph.body)
   end
 end
 
