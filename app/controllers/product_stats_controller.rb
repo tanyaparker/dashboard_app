@@ -22,7 +22,6 @@ class ProductStatsController < ApplicationController
   end 
 
   def get_campaigns
-
     url = "http://says.com/my/campaigns.json"
     resp = Net::HTTP.get_response(URI.parse(url))
     data = resp.body
@@ -35,6 +34,10 @@ class ProductStatsController < ApplicationController
       @per = (@num * 100.0) / @den
       @per = @per.round(1)
     end
+  end
+
+  def get_community
+
 
   end
 end

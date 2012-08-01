@@ -8,6 +8,8 @@ DashboardApp::Application.routes.draw do
 
   get "/campaign" => "product_stats#get_campaigns"
 
+  get "/community" => "product_stats#get_community"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
