@@ -7,15 +7,17 @@
     <%= csrf_meta_tags %>
 
     <script type="text/javascript">
-    window.onload = setupRefresh;
-
-    function setupRefresh() {
-      setTimeout("refreshPage();", 60000); // milliseconds
-    }
-    function refreshPage() {
-       window.location = location.href;
-    }
+      window.onload = setupRefresh;
+      function setupRefresh() {
+        setTimeout("refreshPage();", 60000); // milliseconds
+      }
+      function refreshPage() {
+        window.location = location.href;
+      }
     </script>
+
+    <script type="text/javascript" src="//use.typekit.net/ggp5rdg.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   </head>
   <body>
