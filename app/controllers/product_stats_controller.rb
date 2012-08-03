@@ -14,7 +14,7 @@ class ProductStatsController < ApplicationController
 	  if(@count < 10)
 	    @final_project = @new_project.slice(0, @count)
     else
-      #@count = 10 	
+      @count = 10	
 	    @final_project = @new_project.slice(0, @count)
 	  end
 
@@ -32,7 +32,7 @@ class ProductStatsController < ApplicationController
       @num = @result["#{i}".to_i]["uv_count"]
       @den = @result["#{i}".to_i]["target_uv"]
       @per = (@num * 100.0) / @den
-      @per = @per.round(0)
+      @per = @per.to_i
     end
   end
 
@@ -67,6 +67,33 @@ class ProductStatsController < ApplicationController
     @subau = JSON.parse(sub_au.body)
     @subph = JSON.parse(sub_ph.body)
   end
+
+  def get_sam_emails
+
+  require 'net/pop'
+
+    pop = Net::POP3.new('pop.example.com')
+    pop.start('says@radar.mailgun.org', 'password') 
+=begin         
+    if pop.mails.empty?
+      puts 'No mail.'
+    else
+      i = 0
+      pop.each_mail do |m|
+        File.open("inbox/#{i}", 'w') do |f|
+          f.write m.pop
+        end
+        m.delete
+        i += 1
+      end
+      puts "#{pop.mails.size} mails popped."
+    end
+    pop.finish    
+=end
+
+  end
+
 end
 
-#photo_url for picture
+
+

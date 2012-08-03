@@ -1,14 +1,20 @@
-<div class="container_12">
-  <div id="page_title" class="container_12">Community Team Stats</div>
-	<ul class="feature">
-	  <li> Singapore Sign-ups:  <%= @signsg[0]["datapoints"].last.first.to_i %> </li>
-	  <li> Australia Sign-ups:  <%= @signin[0]["datapoints"].last.first.to_i %> </li>
-	  <li> India Sign-ups:  <%= @signau[0]["datapoints"].last.first.to_i %> </li>
-	  <li> Philippines Sign-ups:  <%= @signph[0]["datapoints"].last.first.to_i %> </li>
-
-	  <li> Singapore Subscribers:  <%= @subsg[0]["datapoints"].last.first.to_i %> </li>
-	  <li> India Subscribers:  <%= @subin[0]["datapoints"].last.first.to_i %> </li>
-	  <li> Australia Subscribers: <%= @subau[0]["datapoints"].last.first.to_i %> </li>
-	  <li> Philippines Suscribers:  <%= @subph[0]["datapoints"].last.first.to_i %> </li>
+<div class="community_container">
+  <div id="page_title">Community Team Stats</div>
+  <div class="community_stats">
+	<ul class="community_card_container">
+	<div class="community_title">Sign-Ups</div>
+	  <li class="community_card"><span class="card_number"><%= @signsg[0]["datapoints"].last.first.to_i %></span> <span class="card_country">Singapore</span> </li>
+	  <li class="community_card"><span class="card_number"><%= @signin[0]["datapoints"].last.first.to_i %></span> <span class="card_country">India</span> </li>
+	  <li class="community_card"><span class="card_number"><%= @signau[0]["datapoints"].last.first.to_i %></span> <span class="card_country">Australia</span> </li>
+	  <li class="community_card"><span class="card_number"><%= @signph[0]["datapoints"].last.first.to_i %></span> <span class="card_country">Philippines</span> </li>
 	</ul>
+	<ul class="community_card_container">
+			<div class="community_title">Subscribers</div>
+	  <li class="community_card"><span class="card_number"><%= @subsg[0]["datapoints"].last.first.to_i %></span> <span class="card_country">Singapore</span> </li>
+	  <li class="community_card"><span class="card_number"><%= @subin[0]["datapoints"].last.first.to_i %></span> <span class="card_country">India</span> </li>
+	  <li class="community_card"><span class="card_number"><%= @subau[0]["datapoints"].last.first.to_i %></span> <span class="card_country">Australia</span> </li>
+	  <li class="community_card"><span class="card_number"><%= @subph[0]["datapoints"].last.first.to_i %></span> <span class="card_country">Philippines</span> </li>
+	</ul>
+	</div>
+
 </div>
